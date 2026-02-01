@@ -1,0 +1,82 @@
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(180deg,#fff,#f7e9ee);
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+#enterText{
+  position:fixed;
+  inset:0;
+  background:rgba(255,255,255,0.95);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  font-family:'Playfair Display',serif;
+  font-size:2.2rem;
+  cursor:pointer;
+  z-index:9999;
+}
+
+.card{
+  background:#fff;
+  padding:40px 30px;
+  border-radius:24px;
+  max-width:420px;
+  box-shadow:0 30px 60px rgba(0,0,0,.12);
+  text-align:center;
+}
+
+.lilies{
+  margin:25px auto;
+}
+
+.cake{
+  width:120px;
+  margin:30px auto 10px;
+}
+
+.cake .tier{
+  height:28px;
+  background:#fff;
+  border:2px solid #e7c9d3;
+  border-radius:12px;
+  margin-bottom:6px;
+}
+
+.cake .tier.small{width:60px;margin:auto;}
+.cake .tier.medium{width:90px;margin:auto;}
+.cake .tier.large{width:120px;margin:auto;}
+
+.cake .flower{
+  font-size:18px;
+  margin-bottom:6px;
+}
+
+h1{
+  font-family:'Playfair Display',serif;
+  font-weight:600;
+  margin-bottom:16px;
+}
+
+p{
+  font-size:15px;
+  line-height:1.8;
+  margin-bottom:14px;
+}
+
+.divider{
+  margin:25px 0;
+  font-size:20px;
+  opacity:.6;
+}
+
+.signature{
+  margin-top:30px;
+  font-size:13px;
+  opacity:.7;
+}
