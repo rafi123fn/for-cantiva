@@ -3,12 +3,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const enter = document.getElementById("enterText");
 
   enter.addEventListener("click", () => {
-    music.volume = 0.8;
+    music.currentTime = 0;
+    music.volume = 0.9;
+
     music.play().then(() => {
       enter.style.display = "none";
     }).catch(err => {
-      alert("Audio blocked. Please tap again.");
-      console.log(err);
+      console.log("Play failed:", err);
+      alert("Tap once more 🤍");
     });
   });
 });
+
+
