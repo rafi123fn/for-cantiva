@@ -6,22 +6,113 @@
 <title>For Cantiva 🤍</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+
+<style>
+.lilies {
+  margin: 25px auto;
+}
+
+.cake {
+  width: 120px;
+  margin: 30px auto 10px;
+}
+
+.cake .tier {
+  height: 28px;
+  background: #fff;
+  border: 2px solid #e7c9d3;
+  border-radius: 12px;
+  margin-bottom: 6px;
+}
+
+.cake .tier.small { width: 60px; margin: auto; }
+.cake .tier.medium { width: 90px; margin: auto; }
+.cake .tier.large { width: 120px; margin: auto; }
+
+.cake .flower {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(180deg,#fff,#f7e9ee);
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+#enterText{
+  position:fixed;
+  inset:0;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Playfair Display',serif;
+  font-size:20px;
+  cursor:pointer;
+  z-index:10;
+}
+
+.card{
+  background:#fff;
+  padding:40px 30px;
+  border-radius:24px;
+  max-width:420px;
+  box-shadow:0 30px 60px rgba(0,0,0,.12);
+  text-align:center;
+}
+
+h1{
+  font-family:'Playfair Display',serif;
+  font-weight:600;
+  margin-bottom:16px;
+}
+
+p{
+  font-size:15px;
+  line-height:1.8;
+  margin-bottom:14px;
+}
+
+.divider{
+  margin:25px 0;
+  font-size:20px;
+  opacity:.6;
+}
+
+.button{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 28px;
+  background:#e6c1cc;
+  color:#fff;
+  border-radius:30px;
+  text-decoration:none;
+  font-size:14px;
+}
+
+.signature{
+  margin-top:30px;
+  font-size:13px;
+  opacity:.7;
+}
+</style>
 </head>
 
 <body>
 
-<!-- TAP TO ENTER -->
-<div id="enterText">
+<div id="enterText" onclick="startSong()">
   Tap to enter ♡
 </div>
 
-<!-- MUSIC -->
 <audio id="bgMusic" preload="auto">
   <source src="assets/perfect.mp3" type="audio/mpeg">
 </audio>
 
-<!-- MAIN CARD -->
 <div class="card" id="mainContent">
 
   <h1>11 April 🤍</h1>
@@ -84,9 +175,20 @@
 
 </div>
 
-<script src="script.js"></script>
+<script>
+function startSong(){
+  const music = document.getElementById("bgMusic");
+  const enter = document.getElementById("enterText");
+
+  music.play().catch(()=>{});
+  enter.style.display = "none";
+}
+</script>
+
 </body>
 </html>
+
+
 
 
 
