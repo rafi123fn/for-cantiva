@@ -1,18 +1,15 @@
-document.addEventListener("DOMContentLoaded", () => {
+function startSong() {
   const music = document.getElementById("bgMusic");
   const enter = document.getElementById("enterText");
+  const content = document.getElementById("mainContent");
 
-  enter.addEventListener("click", () => {
-    music.currentTime = 0;
-    music.volume = 0.9;
-
-    music.play().then(() => {
-      enter.style.display = "none";
-    }).catch(err => {
-      console.log("Play failed:", err);
-      alert("Tap once more 🤍");
-    });
+  music.play().catch(err => {
+    console.log("Play blocked:", err);
   });
-});
+
+  enter.style.display = "none";
+  content.style.display = "block";
+}
+
 
 
